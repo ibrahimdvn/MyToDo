@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Todo App</title>
+  <!-- CSS bağlantısı ve yazı tipi -->
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Ana kapsayıcı -->
+  <div class="container">
+    <!-- Başlık ve tema geçiş butonu -->
+    <header>
+      <h1>My Todo List</h1>
+      <button id="themeToggle" title="Toggle Theme">🌓</button>
+    </header>
+
+    <!-- Görev ekleme alanı -->
+    <div class="input-section">
+      <input id="todoInput" type="text" placeholder="Add a new task" />
+      <button onclick="addTodo()">Add</button>
+    </div>
+
+    <!-- Görev sayacı ve filtre butonları -->
+    <div class="task-info">
+      <span id="taskCount">0 tasks remaining</span>
+      <div class="filters">
+        <button onclick="filterTodos('all')">All</button>
+        <button onclick="filterTodos('active')">Active</button>
+        <button onclick="filterTodos('completed')">Completed</button>
+      </div>
+    </div>
+
+    <!-- Görev listesi -->
+    <ul id="todoList"></ul>
+
+    <!-- Liste boşsa gösterilecek mesaj -->
+    <p id="emptyMessage" class="hidden">🎉 No tasks! Add one above.</p>
+  </div>
+
+  <!-- JavaScript dosyası bağlantısı -->
+  <script src="script.js"></script>
+</body>
+</html>

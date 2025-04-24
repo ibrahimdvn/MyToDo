@@ -1,0 +1,198 @@
+/* Genel sayfa ayarları */
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(to right, #7f7fd5, #86a8e7, #91eae4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  transition: background 0.3s ease;
+  color: #333;
+}
+
+/* Karanlık tema */
+body.dark-theme {
+  background: linear-gradient(to right, #232526, #414345);
+  color: #f0f0f0;
+}
+
+/* Ana kapsayıcı kutu */
+.container {
+  background-color: #fff;
+  padding: 20px 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Karanlık tema için konteyner rengi */
+body.dark-theme .container {
+  background-color: #2b2b2b;
+  color: #f0f0f0;
+}
+
+/* Başlık */
+h1 {
+  text-align: center;
+  color: #333;
+}
+body.dark-theme h1 {
+  color: #f0f0f0;
+}
+
+/* Üst kısımdaki başlık ve tema butonu */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Görev giriş alanı */
+.input-section {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+/* Metin girişi */
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  color: #333;
+}
+
+/* Karanlık temada giriş alanı */
+body.dark-theme input[type="text"] {
+  background-color: #444;
+  border: 1px solid #666;
+  color: #fff;
+}
+
+/* Tüm butonlar */
+button {
+  padding: 10px 16px;
+  background-color: #7f7fd5;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #6b6bcf;
+}
+
+/* Tema geçiş butonu */
+#themeToggle {
+  background: transparent;
+  color: #444;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+}
+body.dark-theme #themeToggle {
+  color: #f0f0f0;
+}
+
+/* Görev listesinin düzeni */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Görev (li) stili */
+li {
+  background: #f0f0f0;
+  margin-bottom: 8px;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s ease;
+  color: #333;
+}
+
+/* Karanlık temada görevler */
+body.dark-theme li {
+  background-color: #3a3a3a;
+  color: #f0f0f0;
+}
+
+/* Tamamlanan görevler */
+li.completed {
+  text-decoration: line-through;
+  color: #aaa;
+  background-color: #e0e0e0;
+}
+body.dark-theme li.completed {
+  background-color: #4a4a4a;
+  color: #888;
+}
+
+/* Silme butonu */
+.delete-btn {
+  background: none;
+  border: none;
+  color: red;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Görev bilgisi (kalan sayısı) */
+.task-info {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #555;
+  text-align: right;
+}
+body.dark-theme .task-info {
+  color: #ccc;
+}
+
+/* Filtre butonları */
+.filters {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.filters button {
+  background-color: #ddd;
+  color: #333;
+}
+
+.filters button:hover {
+  background-color: #bbb;
+}
+
+body.dark-theme .filters button {
+  background-color: #444;
+  color: #eee;
+}
+
+/* Liste boşsa görünecek mesaj */
+#emptyMessage {
+  text-align: center;
+  margin-top: 20px;
+  font-style: italic;
+  color: #888;
+  transition: opacity 0.3s ease;
+}
+body.dark-theme #emptyMessage {
+  color: #aaa;
+}
+
+/* Gizli sınıf */
+.hidden {
+  display: none;
+}
